@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#6366f1" />
+    <meta name="description" content="Real-time collaborative whiteboard — draw together, instantly." />
+    <title>Drawboard — Collaborative Whiteboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #root { height: 100vh; display: flex; flex-direction: column; }
+      .splash {
+        position: fixed; inset: 0; display: flex; align-items: center;
+        justify-content: center; background: #f9fafb; z-index: 9999;
+        font-family: Inter, sans-serif; font-size: 1rem; color: #6366f1;
+        font-weight: 600; letter-spacing: 0.02em;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="splash" id="splash">Drawboard</div>
+    </div>
+    <script>
+      window.addEventListener('load', () => {
+        const s = document.getElementById('splash');
+        if (s) setTimeout(() => s.remove(), 400);
+      });
+    </script>
+  </body>
+</html>
